@@ -2,7 +2,6 @@
 
 === Pact
 To get started with Pact, you need to install the relevant pact components,
-you can find instruction guides on the https://docs.pact.io/implementation-guides[documentation page, role="external", window="_blank"]
-
+you can find instruction guides on the https://docs.pact.io/implementation-guides[documentation page].
 
 
