@@ -43,7 +43,6 @@ public class UserServiceClientPactConsumerContractTest {
                 .body(
                         new PactDslJsonArray()
                                 .object()
-                                .id()
                                 .stringType("fullName")
                                 .stringType("type")
                                 .closeObject())

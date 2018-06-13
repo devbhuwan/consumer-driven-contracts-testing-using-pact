@@ -2,16 +2,16 @@ package com.developerbhuwan.usermanagement;
 
 public class UserDTO {
 
-    private final String name;
+    private final String fullName;
     private final String type;
 
-    public UserDTO(String name, String type) {
-        this.name = name;
+    public UserDTO(String fullName, String type) {
+        this.fullName = fullName;
         this.type = type;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
     public String getType() {
