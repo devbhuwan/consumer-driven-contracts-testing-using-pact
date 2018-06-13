@@ -1,1 +1,0 @@
-# consumer-driven-contracts-testing-using-pact
