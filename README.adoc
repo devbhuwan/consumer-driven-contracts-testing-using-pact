@@ -12,7 +12,6 @@ and its provider (the User Service).
 
 image::archx/consumer-driven-contracts-testing-using-pact.png[Billing System]
 
-
 === REFERENCES
 
 * https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-maven
