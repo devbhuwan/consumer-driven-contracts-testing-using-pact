@@ -1,0 +1,74 @@
+{
+    "provider": {
+        "name": "user-service"
+    },
+    "consumer": {
+        "name": "billing-service"
+    },
+    "interactions": [
+        {
+            "description": "a request to get all billing users",
+            "request": {
+                "method": "GET",
+                "path": "/billing/users"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json;charset=UTF-8"
+                },
+                "body": [
+                    {
+                        "fullName": "string",
+                        "type": "string"
+                    }
+                ],
+                "matchingRules": {
+                    "body": {
+                        "$[0].fullName": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$[0].type": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                },
+                "generators": {
+                    "body": {
+                        "$[0].fullName": {
+                            "type": "RandomString",
+                            "size": 20
+                        },
+                        "$[0].type": {
+                            "type": "RandomString",
+                            "size": 20
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "I have a list of users"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.17"
+        }
+    }
+}
