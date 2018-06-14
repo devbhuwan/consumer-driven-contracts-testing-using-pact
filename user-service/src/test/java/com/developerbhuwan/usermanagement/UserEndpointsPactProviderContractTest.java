@@ -29,9 +29,9 @@ public class UserEndpointsPactProviderContractTest {
     @MockBean
     private UserService userService;
 
-    @State(value = "get all billing users")
+    @State(value = "I have a list of users")
     public void givenARequestGetAllUsers() {
-        UserDTO userDTO = new UserDTO("BHUWAN UPADHYAY", "ADMIN");
+        UserDTO userDTO = new UserDTO("BHUWAN UPADHYAY", "ADMIN", new AddressDTO("Kathmandu"));
         when(userService.getUsers()).thenReturn(Collections.singletonList(userDTO));
     }
 

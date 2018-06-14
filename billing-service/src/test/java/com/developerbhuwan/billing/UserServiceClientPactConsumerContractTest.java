@@ -33,7 +33,7 @@ public class UserServiceClientPactConsumerContractTest {
 
 
         return provider
-                .given("get all billing users")
+                .given("I have a list of users")
                 .uponReceiving("a request to get all billing users")
                 .path("/billing/users")
                 .method(RequestMethod.GET.name())

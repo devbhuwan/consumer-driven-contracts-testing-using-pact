@@ -4,10 +4,12 @@ public class UserDTO {
 
     private final String fullName;
     private final String type;
+    private final AddressDTO address;
 
-    public UserDTO(String fullName, String type) {
+    public UserDTO(String fullName, String type, AddressDTO address) {
         this.fullName = fullName;
         this.type = type;
+        this.address = address;
     }
 
     public String getFullName() {
@@ -16,5 +18,9 @@ public class UserDTO {
 
     public String getType() {
         return type;
+    }
+
+    public AddressDTO getAddress() {
+        return address;
     }
 }
